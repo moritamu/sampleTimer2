@@ -27,7 +27,7 @@ struct ContentView: View {
             NavigationLink{
                 TimerView(timerScreenShow: $timerScreenShow, timeVal: timeVal, initialTime: timeVal)
             } label: {
-                Label("timer", systemImage: "figure.walk")
+                Label("Timer Start", systemImage: "timer")
                     .font(.headline)
 //                    .frame(width: 100, height: 100)
 //                    .foregroundColor(.red)
@@ -62,6 +62,8 @@ struct TimerView: View {
                 
                 Button(action: {
                     timerScreenShow = false
+                    timeVal = 0//ここを付け足してみた。
+//                    ０になるのでタイマーは止まるがDONEが表示されてしまう
                 }, label: {
                     Text("Cancel")
                         .foregroundColor(.red)
@@ -81,7 +83,7 @@ struct TimerView: View {
         }
     }
 }
-
+//これを多分別ファイルにしていい
 struct ProgressBar: View {
     let progress: Int
     let initial: Int

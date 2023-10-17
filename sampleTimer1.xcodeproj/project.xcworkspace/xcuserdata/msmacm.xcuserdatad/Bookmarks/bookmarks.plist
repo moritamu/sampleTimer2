@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>32</string>
+					<key>EndingLineNumber</key>
+					<string>65</string>
+					<key>StartingColumnNumber</key>
+					<string>32</string>
+					<key>StartingLineNumber</key>
+					<string>65</string>
+					<key>Timestamp</key>
+					<string>719268841.3763959</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>sampleTimer1 Watch App/ContentView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string></string>
+				<key>leading</key>
+				<string>                    timerScreenShow = false
+                    timeVal = 0//ここを付け足してみた。
+//                    ０になるのでタイマー</string>
+				<key>trailing</key>
+				<string>は止まるがDONEが表示されてしまう
+                }, label: {
+                    Text("Cancel")
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>4</string>
+					<key>EndingLineNumber</key>
+					<string>85</string>
+					<key>StartingColumnNumber</key>
+					<string>4</string>
+					<key>StartingLineNumber</key>
+					<string>85</string>
+					<key>Timestamp</key>
+					<string>719268894.8827389</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>sampleTimer1 Watch App/ContentView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string></string>
+				<key>leading</key>
+				<string>    }
+}
+//これ</string>
+				<key>trailing</key>
+				<string>を多分別ファイルにしていい
+struct ProgressBar: View {
+    let progress: Int
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>
