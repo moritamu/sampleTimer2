@@ -10,15 +10,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>32</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>65</string>
+					<string>63</string>
 					<key>StartingColumnNumber</key>
-					<string>32</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>65</string>
+					<string>62</string>
 					<key>Timestamp</key>
-					<string>719268841.3763959</string>
+					<string>719831708.207333</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,15 +34,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string></string>
+				<string>                }, label: {
+</string>
 				<key>leading</key>
-				<string>                    timerScreenShow = false
-                    timeVal = 0//ここを付け足してみた。
-//                    ０になるのでタイマー</string>
+				<string>                    timeVal = 0//ここを付け足してみた。
+//                    ０になるのでタイマーは止まるがDONEが表示されてしまう
+</string>
 				<key>trailing</key>
-				<string>は止まるがDONEが表示されてしまう
-                }, label: {
-                    Text("Cancel")
+				<string>                    Text("Cancel")
+                        .foregroundColor(.red)
+                })
 </string>
 			</dict>
 			<key>type</key>
@@ -54,15 +55,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>4</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>85</string>
+					<string>44</string>
 					<key>StartingColumnNumber</key>
-					<string>4</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>85</string>
+					<string>43</string>
 					<key>Timestamp</key>
-					<string>719268894.8827389</string>
+					<string>719831708.207353</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -78,15 +79,61 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string></string>
+				<string>        if timeVal &gt; -1 {
+</string>
 				<key>leading</key>
-				<string>    }
-}
-//これ</string>
+				<string>    var body: some View {
+//        Text("\(self.timeVal)")
+</string>
 				<key>trailing</key>
-				<string>を多分別ファイルにしていい
-struct ProgressBar: View {
-    let progress: Int
+				<string>            VStack {
+                ZStack {
+                    Text("\(timeVal)").font(.system(size: 40))
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>72</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>71</string>
+					<key>Timestamp</key>
+					<string>719831708.207363</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>sampleTimer1 Watch App/ContentView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>            }, label: {
+</string>
+				<key>leading</key>
+				<string>            Button(action: {
+                timerScreenShow = false
+</string>
+				<key>trailing</key>
+				<string>                Text("Done!")
+                    .font(.title)
+                    .foregroundColor(.green)
 </string>
 			</dict>
 			<key>type</key>
