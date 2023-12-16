@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>63</string>
+					<string>82</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>62</string>
+					<string>81</string>
 					<key>Timestamp</key>
-					<string>719831708.207333</string>
+					<string>720259191.39185</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,106 +34,106 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>                }, label: {
+				<string>                Button(action: {
 </string>
 				<key>leading</key>
-				<string>                    timeVal = 0//ここを付け足してみた。
-//                    ０になるのでタイマーは止まるがDONEが表示されてしまう
+				<string>                }
+                
 </string>
 				<key>trailing</key>
-				<string>                    Text("Cancel")
-                        .foregroundColor(.red)
+				<string>                    timerScreenShow = false
+                    //                    timeVal = 0//ここを付け足してみた。
+                    //                    ０になるのでタイマーは止まるがDONEが表示されてしまう
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>48</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>47</string>
+					<key>Timestamp</key>
+					<string>720259191.391842</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>sampleTimer1 Watch App/ContentView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>    let initialTime: Int
+</string>
+				<key>leading</key>
+				<string>    @Binding var timerScreenShow: Bool
+    @State var timeVal: Int
+</string>
+				<key>trailing</key>
+				<string>    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//Timer.Publishを使ってみた。これでバックグラウンドでも動くようになったはず。
+    
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>90</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>89</string>
+					<key>Timestamp</key>
+					<string>720259191.391824</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>sampleTimer1 Watch App/ContentView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                .padding(.top)
+</string>
+				<key>leading</key>
+				<string>                        .foregroundColor(.red)
                 })
 </string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>44</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>43</string>
-					<key>Timestamp</key>
-					<string>719831708.207353</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>sampleTimer1 Watch App/ContentView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>        if timeVal &gt; -1 {
-</string>
-				<key>leading</key>
-				<string>    var body: some View {
-//        Text("\(self.timeVal)")
-</string>
 				<key>trailing</key>
-				<string>            VStack {
-                ZStack {
-                    Text("\(timeVal)").font(.system(size: 40))
-</string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>72</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>71</string>
-					<key>Timestamp</key>
-					<string>719831708.207363</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>sampleTimer1 Watch App/ContentView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>            }, label: {
-</string>
-				<key>leading</key>
-				<string>            Button(action: {
-                timerScreenShow = false
-</string>
-				<key>trailing</key>
-				<string>                Text("Done!")
-                    .font(.title)
-                    .foregroundColor(.green)
+				<string>            }
+        } else {
+            Button(action: {
 </string>
 			</dict>
 			<key>type</key>

@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var timeVal = 1
     @State var timerScreenShow: Bool = false
+//NavigationStackのPathを使った方法でやってみたい
     
     var body: some View {
         NavigationStack{
@@ -25,15 +26,18 @@ struct ContentView: View {
             }
             
             NavigationLink{
+                //                if timerScreenShow == false {
+                //                    timerScreenShow = true
+                //                }
                 TimerView(timerScreenShow: $timerScreenShow, timeVal: timeVal, initialTime: timeVal)
             } label: {
                 Label("Timer Start", systemImage: "timer")
                     .font(.headline)
-//                    .frame(width: 100, height: 100)
-//                    .foregroundColor(.red)
+                //                    .frame(width: 100, height: 100)
+                //                    .foregroundColor(.red)
             }
-//            .frame(width: 200, height:10)
-//            .background(.blue)
+            //            .frame(width: 200, height:10)
+            //            .background(.blue)
         }
     }
 }
@@ -42,28 +46,43 @@ struct TimerView: View {
     @Binding var timerScreenShow: Bool
     @State var timeVal: Int
     let initialTime: Int
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//Timer.Publishを使ってみた。これでバックグラウンドでも動くようになったはず。
     
     var body: some View {
-//        Text("\(self.timeVal)")
         if timeVal > -1 {
+            //ここでType '()' cannot conform to 'View'のエラー            timerScreenShow = true
+            //timeScreenShowをTrueにしたい。でないので、タイマーが動かない
+            //            onAppearで対応する
             VStack {
                 ZStack {
                     Text("\(timeVal)").font(.system(size: 40))
-                        .onAppear() {
-                            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in 
-                                if timeVal > -1 {
+                        .onReceive(timer) { _ in
+                            if timerScreenShow {
+                                if timeVal != 0{
                                     timeVal -= 1
+                                    print( timeVal)
+                                    print( initialTime)
+                                }else{
+                                    timerScreenShow.toggle()
+                                    timeVal = initialTime
                                 }
                             }
-                    }
+                        }
                     ProgressBar(progress: timeVal, initial: initialTime)
                         .frame(width: 90.0, height: 90.0)
+                    
+                }
+                .onAppear() {
+                    if timerScreenShow == false {
+                        timerScreenShow.toggle()
+                    }
                 }
                 
                 Button(action: {
                     timerScreenShow = false
-                    timeVal = 0//ここを付け足してみた。
-//                    ０になるのでタイマーは止まるがDONEが表示されてしまう
+                    //                    timeVal = 0//ここを付け足してみた。
+                    //                    ０になるのでタイマーは止まるがDONEが表示されてしまう
                 }, label: {
                     Text("Cancel")
                         .foregroundColor(.red)
@@ -82,6 +101,7 @@ struct TimerView: View {
             }
         }
     }
+    
 }
 //これを多分別ファイルにしていい
 struct ProgressBar: View {
