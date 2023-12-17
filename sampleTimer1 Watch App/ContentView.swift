@@ -4,13 +4,14 @@
 //
 //  Created by MsMacM on 2023/10/14.
 //  https://zenn.dev/ryo_kawamata/articles/timer-app-with-swift-ui
+//　キャンセルボタンあたりがうまく動かない。
 
 import SwiftUI
 
 struct ContentView: View {
     @State var timeVal = 1
     @State var timerScreenShow: Bool = false
-//NavigationStackのPathを使った方法でやってみたい
+    //NavigationStackのPathを使った方法でやってみたい
     
     var body: some View {
         NavigationStack{
@@ -47,7 +48,7 @@ struct TimerView: View {
     @State var timeVal: Int
     let initialTime: Int
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-//Timer.Publishを使ってみた。これでバックグラウンドでも動くようになったはず。
+    //Timer.Publishを使ってみた。これでバックグラウンドでも動くようになったはず。→動いた。
     
     var body: some View {
         if timeVal > -1 {
@@ -61,11 +62,13 @@ struct TimerView: View {
                             if timerScreenShow {
                                 if timeVal != 0{
                                     timeVal -= 1
-                                    print( timeVal)
-                                    print( initialTime)
+                                    //                                    print( timeVal)
+                                    //                                    print( initialTime)
                                 }else{
                                     timerScreenShow.toggle()
                                     timeVal = initialTime
+                                    //                                    ブルブル
+                                    WKInterfaceDevice.current().play(.notification)
                                 }
                             }
                         }
@@ -74,9 +77,7 @@ struct TimerView: View {
                     
                 }
                 .onAppear() {
-                    if timerScreenShow == false {
-                        timerScreenShow.toggle()
-                    }
+                    timerScreenShow = true
                 }
                 
                 Button(action: {

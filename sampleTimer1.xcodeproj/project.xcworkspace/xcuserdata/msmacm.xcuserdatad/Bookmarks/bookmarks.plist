@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>82</string>
+					<string>83</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>81</string>
+					<string>82</string>
 					<key>Timestamp</key>
-					<string>720259191.39185</string>
+					<string>724538322.742509</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -57,13 +57,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>48</string>
+					<string>49</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>47</string>
+					<string>48</string>
 					<key>Timestamp</key>
-					<string>720259191.391842</string>
+					<string>724538322.7424999</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -87,7 +87,7 @@
 </string>
 				<key>trailing</key>
 				<string>    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-//Timer.Publishを使ってみた。これでバックグラウンドでも動くようになったはず。
+    //Timer.Publishを使ってみた。これでバックグラウンドでも動くようになったはず。→動いた。
     
 </string>
 			</dict>
@@ -102,13 +102,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>90</string>
+					<string>91</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>89</string>
+					<string>90</string>
 					<key>Timestamp</key>
-					<string>720259191.391824</string>
+					<string>724538322.74218</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
